@@ -2,10 +2,8 @@ import React, {useState, createContext} from "react"
 const UserContext = createContext()
 
 function UserProvider({ children }){
-    const [userName, setUserName] = useState("")
+    const [message, setMessage] = useState("")
     const [token, setToken] = useState()
-    const [checkingAccount, setcheckingAccount] = useState([])
-    const [balance, setBalance] = useState(0)
 
     const config = {
         headers: {
@@ -15,10 +13,8 @@ function UserProvider({ children }){
 
     return (
         <UserContext.Provider 
-        value = {{userName, setUserName,
-            token, setToken, 
-            checkingAccount, setcheckingAccount,
-            balance, setBalance, config}}>
+        value = {{message, setMessage,
+            token, setToken, config}}>
             {children}
         </UserContext.Provider>
 

@@ -13,6 +13,7 @@ const Container = styled.div`
         align-items: center;
         margin-top: 25px;
         margin-bottom: 25px;
+        gap: 15px;
 
         .exit {
             font-size: 36px;
@@ -56,73 +57,7 @@ const Container = styled.div`
     }
 `
 
-const Box = styled.div`
-    width: 90vw;
-    height: 70vh;
-    background: #FFFFFF;
-    border: 1px solid #A328D6;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    position: relative;
-
-    .noRegister{
-        align-items: center;
-        color: #868686;
-        display: flex;
-        font-family: 'Raleway';
-        font-weight: 400;
-        font-size: 20px;
-        height: 70vh;
-        justify-content: center; 
-    }
-
-    .transitions{
-        display: flex;
-        font-family: 'Raleway';
-        font-weight: 400;
-        font-size: 16px;
-        justify-content: space-between;
-        align-items: center;
-        margin: 5px;
-
-        span{
-            margin: 5px;
-        }
-
-        .date {
-            color: #C6C6C6;
-        }
-
-        .description{
-            color: #000000;
-        }
-
-        .withdraw{
-            color: #C70000;
-        }
-
-    }
-
-    .controlPosition{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        .balance {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin: 5px;
-        }
-    }
-`
-
-const InOut = styled.div`
-    color: ${props => props.color};
-`
 
 export {
-    Container,
-    Box,
-    InOut
+    Container
 }

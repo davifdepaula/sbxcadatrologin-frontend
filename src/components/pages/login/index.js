@@ -16,7 +16,7 @@ function Login() {
        const url = process.env.REACT_APP_API_URL
        axios.post(url, {email, password})
         .then(response => {
-            setToken(response.data)
+            setToken(response.data.token)
             navigate('/home')
         })
         .catch(error => alert(error.response.data))
@@ -29,7 +29,7 @@ function Login() {
         <LoginContainer>
             <div>
                 <h1>
-                    MyWallet
+                    SBX
                 </h1>
                 <form onSubmit={signIn}>
                     <input 
